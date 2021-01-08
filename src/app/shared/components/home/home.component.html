@@ -1,0 +1,4 @@
+<h1>{{title$ | async}}</h1>
+<input [(ngModel)]="titleInput" />
+<button (click)="updateTitle()">submit</button>
+<a [routerLink]="['/todo']">todo list</a>

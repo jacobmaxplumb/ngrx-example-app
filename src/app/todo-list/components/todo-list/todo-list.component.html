@@ -1,0 +1,7 @@
+<div>
+    <div *ngFor="let todoItem of todos$ | async">
+        <input type="checkbox" (click)="todoClicked(todoItem)" [checked]="todoItem.completed"/> {{todoItem.task}} <span (click)="deleteTodo(todoItem)" style="margin-left: 10px; cursor: pointer;">X</span>
+    </div>
+</div>
+<input [(ngModel)]="todoInput"/>
+<button (click)="addTodoItem()">Add</button>
